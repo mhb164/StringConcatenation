@@ -27,8 +27,22 @@ Strings and string concatenation is one of the most used concepts in software de
 
 The best one is [Raw string literals](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11#raw-string-literals) that intrduced in C# 11. It's more readable than `+` operator and also, easier to edit.
 
-![StringLiterals PlusOperator vs RawStringLiterals](Presetation/StringLiterals_PlusOperator_vs_RawStringLiterals.jpg)
-
+<div id="image-table">
+    <table>
+       <tr>
+          <th> + operator </th>
+          <th> Raw string literals </th>
+       </tr>
+	    <tr>
+    	    <td style="padding: 10px;">
+        	    <img src="Presetation/StringLiterals_PlusOperator.jpg"/>
+      	    </td>
+            <td style="padding: 10px;">
+            	<img src="Presetation/StringLiterals_RawStringLiterals.jpg" >
+            </td>
+        </tr>
+    </table>
+</div>
 
 comming soon...
 > ## String formatting
