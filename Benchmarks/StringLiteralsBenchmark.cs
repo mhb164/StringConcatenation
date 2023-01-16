@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 namespace StringConcatenation.Benchmarks;
 
 [MemoryDiagnoser(true)]
-//[SimpleJob(runtimeMoniker: RuntimeMoniker.Net60)]
-//[SimpleJob(runtimeMoniker: RuntimeMoniker.Net70)]
+[SimpleJob(runtimeMoniker: RuntimeMoniker.Net60)]
+[SimpleJob(runtimeMoniker: RuntimeMoniker.Net70)]
 [Config(typeof(Config))]
 public class StringLiteralsBenchmark
 {
@@ -24,7 +24,7 @@ public class StringLiteralsBenchmark
         }
     }
 
-    [Benchmark]
+    [Benchmark(Description = "+ operator")]
     public void PlusOperator()
     {
         _ = "Put aside your clever schemes!" +
@@ -51,13 +51,13 @@ public class StringLiteralsBenchmark
 
     }
 
-    [Benchmark]
+    [Benchmark(Description = "One-line (Hard to read)")]
     public void OneLineHardToRead()
     {
         _ = "Put aside your clever schemes!\r\nO lover, be mindless! Become mad!\r\nDive into the heart of the flame!\r\nBecome fearless! Be like a moth!\r\n\r\nTurn away from the self\r\nand tear down the house!\r\nThen, come and dwell in the house of love!\r\nBe a lover! Live with lovers!\r\n\r\nClean your chest from all hostility.\r\nWash it seven times.\r\nThen, fill it with the wine of love!\r\nBe a chalice for love! Be a chalice!\r\n\r\nYou must be all love\r\nto be worthy of the beloved.\r\nWhen going to the gathering of drunks,\r\nbe a drunk! Become drunk!\r\n\r\nRumi – Divan of Shams – Poem 2131";
     }
 
-    [Benchmark]
+    [Benchmark(Description = "Raw string literals")]
     public void RawStringLiterals()
     {
         _ = """
@@ -85,7 +85,7 @@ public class StringLiteralsBenchmark
              """;
     }
 
-    [Benchmark(Baseline = true)]
+    [Benchmark(Description = "string.Join")]
     public void StringJoin()
     {
         _ = string.Join(Environment.NewLine,
@@ -112,7 +112,7 @@ public class StringLiteralsBenchmark
                         "Rumi – Divan of Shams – Poem 2131");
     }
 
-    [Benchmark]
+    [Benchmark(Baseline = true, Description = "string.Concat")]
     public void StringConcat()
     {
         _ = string.Concat("Put aside your clever schemes!", Environment.NewLine,
