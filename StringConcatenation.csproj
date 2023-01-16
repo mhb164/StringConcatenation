@@ -18,8 +18,4 @@
 	  <PackageReference Include="BenchmarkDotNet" Version="0.13.4" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Presetation\" />
-	</ItemGroup>
-
 </Project>

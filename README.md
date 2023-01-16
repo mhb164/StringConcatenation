@@ -21,6 +21,7 @@ Strings and string concatenation is one of the most used concepts in software de
 
 The best one is [Raw string literals](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11#raw-string-literals) that intrduced in C# 11. It's more readable than `+` operator and also, easier to edit.
 
+![StringLiterals PlusOperator vs RawStringLiterals](Presetation/StringLiterals_PlusOperator_vs_RawStringLiterals.jpg)
 
 ## String formatting
 - Small length
