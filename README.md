@@ -23,21 +23,23 @@ Strings and string concatenation is one of the most used concepts in software de
 |             string.Join | .NET 7.0 | 382.4700 ns | 0.855 | 0.3190 |    1336 B |        0.91 |
 |           string.Concat | .NET 7.0 | 447.6072 ns | 1.000 | 0.3500 |    1464 B |        1.00 |
 
-`string.Join` and `string.Concat` aren't sutable for string literals concatenation, and must be avoided. 
+`string.Join` and `string.Concat` aren't suitable for string literals concatenation, and must be avoided. 
 
 The best one is [Raw string literals](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11#raw-string-literals) that intrduced in C# 11. It's more readable than `+` operator and also, easier to edit.
 
 ![StringLiterals PlusOperator vs RawStringLiterals](Presetation/StringLiterals_PlusOperator_vs_RawStringLiterals.jpg)
 
-## String formatting
-- Small length
+
+comming soon...
+> ## String formatting
+> - Small length
  
-- Medium length
+> - Medium length
 
-- Long length
+> - Long length
 
-## Culture in string formatting 
+> ## Culture in string formatting 
 
 
-## `string.Join` vs `string.Concat`
+> ## `string.Join` vs `string.Concat`
 
